@@ -1,5 +1,8 @@
 <?php
 
+    header("Access-Control-Allow-Origin: *");
+    header("Content-Type: application/json; charset=UTF-8");
+
     if(isset($_GET["ref"])){
         $reference = $_GET["ref"];
 
@@ -13,13 +16,16 @@
         $query = "SELECT * FROM " . $reference . " ORDER BY uuid DESC LIMIT 1";
         
         $result = mysqli_query($connection, $query);
-    
-        while($row = mysqli_fetch_assoc($result)){
-            $last_chat["chat"]["user_id"] = $row["user_id"];
-            $last_chat["chat"]["message_body"] = $row["message_body"];
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_assoc($result)){
+                $last_chat["chat"]["user_id"] = $row["user_id"];
+                $last_chat["chat"]["message_body"] = $row["message_body"];
+            }
+        
+            echo json_encode($last_chat);
+        }else{
+            echo '{"result": "error"}';
         }
-    
-        echo json_encode($last_chat);
     }
 
     // http://localhost/anonymous_chat/api/all_regions.php?ref=asia
