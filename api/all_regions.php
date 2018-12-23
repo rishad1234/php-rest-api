@@ -8,6 +8,7 @@
                 getAllregions($reference);
                 break;
             default:
+                echo '{"result": "error"}';
                 break;
         }
     }
