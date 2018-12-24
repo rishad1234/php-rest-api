@@ -28,10 +28,10 @@
         }
     }
 
-    // http://localhost/anonymous_chat/api/all_regions.php?ref=asia
-    // http://localhost/anonymous_chat/api/all_regions.php?ref=africa
-    // http://localhost/anonymous_chat/api/all_regions.php?ref=north_america
-    // http://localhost/anonymous_chat/api/all_regions.php?ref=south_america
-    // http://localhost/anonymous_chat/api/all_regions.php?ref=europe
+    // http://localhost/anonymous_chat/api/lastchat.php?ref=asia
+    // http://localhost/anonymous_chat/api/lastchat.php?ref=africa
+    // http://localhost/anonymous_chat/api/lastchat.php?ref=north_america
+    // http://localhost/anonymous_chat/api/lastchat.php?ref=south_america
+    // http://localhost/anonymous_chat/api/lastchat.php?ref=europe
     // these are the api url
 ?>

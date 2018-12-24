@@ -33,7 +33,7 @@
     //http://localhost/anonymous_chat/api/postchat.php
     // this is the api url
 
-    // the request shuld be sent as a json request formatted like
+    // the request should be sent as a json request formatted like
 
     // {
     //     "region" : "europe",
