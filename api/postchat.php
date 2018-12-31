@@ -14,9 +14,9 @@
     function postchat($response){
         include "../db.php";
         echo "gese";
-        $region = $response['region'];
-        $user_id = $response['user_id'];
-        $message_body = $response['message_body'];
+        $region = mysqli_real_escape_string($connection, trim($response['region']));
+        $user_id = mysqli_real_escape_string($connection, trim($response['user_id']));
+        $message_body = mysqli_real_escape_string($connection, trim($response['message_body']));
 
         // INSERT INTO `asia` (`uuid`, `user_id`, `message_body`) VALUES (NULL, 'bdf', 'sfdgsdcv');
 
